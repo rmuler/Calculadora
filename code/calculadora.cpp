@@ -1,11 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main () {
 	//var
 	int op,num1,num2,resultado,resto;
 	float resultadoDiv;
+	char opcao [30] = "SIM";
 	
+	//laço de re
+	while(strcmp(opcao, "SIM") == 0) {
+
+
 	//interface
 	printf("-------------------------------------------------------\n");
 	printf("SELECIONE O NUMERO RESPECTIVO PARA A OPERACAO DESEJADA:\n");
@@ -50,6 +56,15 @@ int main () {
 			printf("DADO INVALIDO\n");
 			break;
 	}
+
+	//verificando o desejo do usuário
+	printf("Deseja continuar? Escreva em maiúsculo\n");
+	scanf("%s",&opcao);
+
+	//limpando o console
+	system("cls");
+
+}
 	system("pause");
 	return 0;
 }
